@@ -40,10 +40,10 @@ export const SignUp = () => {
   });
 
   return (
-    <div className="wrapper min-w-[30vw] min-h-[75vh] flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-[20px]">
+    <div className="wrapper min-w-[30vw] min-h-[78vh] flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-[20px]">
       <div className="container flex flex-col items-center justify-center bg-white">
         {/* Logo */}
-        <div className="image mb-10">
+        <div className="image mb-5">
           <Image
             src="/images/signup.svg"
             alt="Sign Up"
@@ -61,7 +61,7 @@ export const SignUp = () => {
           </span>
         </div>
         {/* Signup google button */}
-        <div className="mt-8">
+        <div className="mt-5">
           <Button
             variant="bordered"
             className="flex items-center justify-center gap-2 w-full px-10 py-1 rounded-[8px] border border-zinc-200 hover:bg-zinc-100"
