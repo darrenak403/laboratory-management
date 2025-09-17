@@ -3,7 +3,10 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}", // single component styles
+    "./node_modules/@heroui/theme/dist/components/button.js",
+    // or you can use a glob pattern (multiple component styles)
+    "./node_modules/@heroui/theme/dist/components/(button|snippet|code|input).js",
   ],
   darkMode: "class", // Enable dark mode via class strategy
   theme: {
@@ -50,5 +53,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [heroui()],
 };
