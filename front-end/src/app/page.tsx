@@ -1,10 +1,18 @@
-import {ThemeToggle} from "@/components/modules/SwithTheme/theme-toggle";
-import Image from "next/image";
+"use client";
+import React from "react";
+import Link from "next/link";
+import {Button} from "@heroui/react";
+import {
+  FlaskIcon,
+  ChartLineIcon,
+  GearIcon,
+  ClipboardIcon,
+} from "@phosphor-icons/react";
 
 export default function Home() {
   return (
-    <div>
-      <ThemeToggle />
+    <div className="min-h-screen">
+      <h1 className="text-4xl font-bold">Welcome to LabMS</h1>
     </div>
   );
 }

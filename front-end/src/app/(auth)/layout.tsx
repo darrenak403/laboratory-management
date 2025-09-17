@@ -1,4 +1,6 @@
 import React from "react";
+import authImage from "../../../public/images/black-girl.svg";
+import Image from "next/image";
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -6,21 +8,21 @@ interface AuthLayoutProps {
 
 export default function AuthLayout({children}: AuthLayoutProps) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-        {/* Logo/Brand */}
-        <div className="text-center">
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white">
-            Laboratory Management System
-          </h2>
-          <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Quản lý phòng thí nghiệm hiệu quả
-          </p>
-        </div>
-
-        {/* Auth Form */}
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg px-8 py-8">
+    <div className="absolute inset-0 min-w-[100vw] min-h-[100vh] flex justify-around items-center bg-blue-100 z-10">
+      <div className="min-h-[85vh] w-[90%] bg-white rounded-[20px] flex overflow-hidden ">
+        {/* Left side */}
+        <div className="flex-[1.1] flex items-center justify-center">
           {children}
+        </div>
+        {/* Right side */}
+        <div className="flex-[0.9] flex items-center justify-center bg-blue-400">
+          <Image
+            src={authImage}
+            alt="Auth Image"
+            width={400}
+            height={400}
+            quality={100}
+          />
         </div>
       </div>
     </div>
