@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-100: #f7cac9;
+  --color-400: #f75270;
 }
 
 .dark {
