@@ -33,7 +33,7 @@ export const SignIn = () => {
     },
   });
   return (
-    <div className="wrapper min-w-[30vw] min-h-[60vh] flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.15)]  rounded-[20px]">
+    <div className="wrapper min-w-[30vw] min-h-[65vh] flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.15)]  rounded-[20px]">
       <div className="container flex flex-col items-center justify-center bg-white ">
         {/* Logo */}
         <div className="image mb-10 ">
@@ -81,9 +81,9 @@ export const SignIn = () => {
         >
           <div className="mb-5">
             <Input
+              label="Email"
               name="email"
               type="email"
-              placeholder="Email address"
               value={formik.values.email}
               onValueChange={(value) => formik.setFieldValue("email", value)}
               isInvalid={!!(formik.touched.email && formik.errors.email)}
@@ -99,9 +99,9 @@ export const SignIn = () => {
           </div>
           <div>
             <Input
+              label="Password"
               name="password"
               type="password"
-              placeholder="Password"
               value={formik.values.password}
               onValueChange={(value) => formik.setFieldValue("password", value)}
               isInvalid={!!(formik.touched.password && formik.errors.password)}
@@ -133,7 +133,7 @@ export const SignIn = () => {
             href="/signup"
             className="text-amber-500 font-medium hover:underline"
           >
-            Sign in
+            Sign up
           </Link>
         </div>
       </div>

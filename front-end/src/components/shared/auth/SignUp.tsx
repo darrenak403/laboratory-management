@@ -40,7 +40,7 @@ export const SignUp = () => {
   });
 
   return (
-    <div className="wrapper min-w-[30vw] min-h-[72vh] flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-[20px]">
+    <div className="wrapper min-w-[30vw] min-h-[75vh] flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.15)] rounded-[20px]">
       <div className="container flex flex-col items-center justify-center bg-white">
         {/* Logo */}
         <div className="image mb-10">
@@ -88,9 +88,9 @@ export const SignUp = () => {
         >
           <div>
             <Input
+              label="Full Name"
               name="fullName"
               type="text"
-              placeholder="Full name"
               value={formik.values.fullName}
               onValueChange={(value) => formik.setFieldValue("fullName", value)}
               isInvalid={!!(formik.touched.fullName && formik.errors.fullName)}
@@ -106,9 +106,9 @@ export const SignUp = () => {
           </div>
           <div>
             <Input
+              label="Email"
               name="email"
               type="email"
-              placeholder="Email address"
               value={formik.values.email}
               onValueChange={(value) => formik.setFieldValue("email", value)}
               isInvalid={!!(formik.touched.email && formik.errors.email)}
@@ -124,9 +124,9 @@ export const SignUp = () => {
           </div>
           <div>
             <Input
+              label="Password"
               name="password"
               type="password"
-              placeholder="Password"
               value={formik.values.password}
               onValueChange={(value) => formik.setFieldValue("password", value)}
               isInvalid={!!(formik.touched.password && formik.errors.password)}
@@ -142,9 +142,9 @@ export const SignUp = () => {
           </div>
           <div>
             <Input
+              label="Confirm password"
               name="confirmPassword"
               type="password"
-              placeholder="Confirm password"
               value={formik.values.confirmPassword}
               onValueChange={(value) =>
                 formik.setFieldValue("confirmPassword", value)
